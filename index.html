@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Horarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Gestión de Horarios</h1>
+    <form id="audioForm">
+        <label for="audio">Sube tu archivo de audio:</label>
+        <input type="file" id="audio" name="audio" accept="audio/*">
+        <button type="submit">Transcribir</button>
+    </form>
+    <div id="transcriptionResult"></div>
+    <div id="scheduleForm">
+        <h2>Estandariza tu horario</h2>
+        <textarea id="scheduleText" rows="10" cols="50"></textarea>
+        <button id="standardizeButton">Estandarizar</button>
+    </div>
+    <div id="standardizedResult"></div>
+    <button id="createScheduleButton">Crear Horario</button>
+    <script src="scripts.js"></script>
+</body>
+</html>
