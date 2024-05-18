@@ -47,3 +47,9 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+import openai
+openai.api_key= "sk-proj-Adr7CwOYdUlC4ojCfgEiT3BlbkFJyKFdnmiYDHEvraBYnmap"
+
+def chat_with_gpt(prompt):
