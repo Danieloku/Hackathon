@@ -58,4 +58,7 @@ import openai
 openai.api_key= "sk-proj-Adr7CwOYdUlC4ojCfgEiT3BlbkFJyKFdnmiYDHEvraBYnmap"
 
 def chat_with_gpt(prompt):
-    response =  openai
+    response =  openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{}]
+    )
