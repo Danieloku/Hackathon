@@ -9,7 +9,7 @@ h1 {
     text-align: center;
 }
 
-form, #scheduleForm, #standardizedResult {
+form, #scheduleForm, #standardizedResult, #controls, #recordingsList {
     margin: 20px 0;
     padding: 20px;
     background-color: #fff;
@@ -20,4 +20,63 @@ form, #scheduleForm, #standardizedResult {
 button {
     display: block;
     margin-top: 10px;
+    font-size: 1rem;
+    background: #0088cc;
+    text-align: center;
+    color: white;
+    border: none;
+    transition: all 0.2s;
+    padding: 0.5rem;
+}
+
+button:hover,
+button:focus {
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 1);
+    background: #0ae;
+}
+
+button:active {
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(2px);
+}
+
+/* Estilos específicos del grabador de voz */
+#controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#controls button {
+    width: calc(50% - 10px);
+}
+
+#recordingsList {
+    list-style-type: none;
+}
+
+#recordingsList li {
+    margin-bottom: 10px;
+}
+
+audio {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+}
+
+.clip p {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.clip button {
+    font-size: 1rem;
+    float: right;
+}
+
+button.delete {
+    background: #f00;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
 }

@@ -3,6 +3,12 @@ import whisper
 import pandas as pd
 import os
 
+# Cargar la API Key de OpenAI desde una variable de entorno
+openai_api_key = os.getenv('OPENAI_API_KEY')
+
+if not openai_api_key:
+    raise ValueError("La API Key de OpenAI no está configurada. Por favor, configúrala como una variable de entorno.")
+
 app = Flask(__name__)
 
 model = whisper.load_model("base")
@@ -48,8 +54,8 @@ def index():
 if __name__ == '__main__':
     app.run(debug=True)
 
-
 import openai
 openai.api_key= "sk-proj-Adr7CwOYdUlC4ojCfgEiT3BlbkFJyKFdnmiYDHEvraBYnmap"
 
 def chat_with_gpt(prompt):
+    response =  openai

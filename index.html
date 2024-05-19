@@ -8,11 +8,22 @@
 </head>
 <body>
     <h1>Gestión de Horarios</h1>
+
+    <!-- Grabador de Audio -->
+    <div id="controls">
+        <button id="recordButton">Grabar</button>
+        <button id="stopButton" disabled>Detener</button>
+    </div>
+    <h2>Audio Grabado</h2>
+    <ul id="recordingsList"></ul>
+
+    <!-- Formulario para Subir Archivo de Audio -->
     <form id="audioForm">
         <label for="audio">Sube tu archivo de audio:</label>
         <input type="file" id="audio" name="audio" accept="audio/*">
         <button type="submit">Transcribir</button>
     </form>
+
     <div id="transcriptionResult"></div>
     <div id="scheduleForm">
         <h2>Estandariza tu horario</h2>
@@ -21,6 +32,8 @@
     </div>
     <div id="standardizedResult"></div>
     <button id="createScheduleButton">Crear Horario</button>
+
     <script src="scripts.js"></script>
+    <script src="recorder.js"></script>
 </body>
 </html>
